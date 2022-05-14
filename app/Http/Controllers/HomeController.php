@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $posts=Post::select(['id', 'user_id', 'title', 'created_at','cover_photo_path'])->contentSummary()->with('user')->orderByDesc('created_at')->paginate(12);
+        return view('home.index',['posts'=>$posts]);
     }
 }
