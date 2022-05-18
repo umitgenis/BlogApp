@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,16 +19,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/detail/{id}', [PostController::class, 'detail'])->name('detail');
+Route::get('/profile/{id}', [UserController::class, 'profile'])->name('profile');
+
 
 Auth::routes();
 
 Route::middleware('auth')->group(function (){
-    Route::get('/create', [\App\Http\Controllers\PostController::class, 'create'])->name('create');
-    Route::post('/create', [\App\Http\Controllers\PostController::class, 'store'])->name('create.store');
-    Route::get('/update/{id}', [\App\Http\Controllers\PostController::class, 'updateView'])->name('updateView');
-    Route::post('/update/{id}', [\App\Http\Controllers\PostController::class, 'update'])->name('update');
-    Route::get('/delete/{id}', [\App\Http\Controllers\PostController::class, 'delete'])->name('delete');
-    Route::post('comment/{id}', [\App\Http\Controllers\PostController::class, 'commentCreate'])->name('commentCreate');
+    Route::get('/create', [PostController::class, 'create'])->name('create');
+    Route::post('/create', [PostController::class, 'store'])->name('create.store');
+    Route::get('/update/{id}', [PostController::class, 'updateView'])->name('updateView');
+    Route::post('/update/{id}', [PostController::class, 'update'])->name('update');
+    Route::get('/delete/{id}', [PostController::class, 'delete'])->name('delete');
+    Route::post('comment/{id}', [PostController::class, 'commentCreate'])->name('commentCreate');
 
 });
 
