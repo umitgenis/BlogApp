@@ -5,12 +5,6 @@
             @if (Route::has('login'))
                 <div class="col-auto">
                     @auth
-{{--                        <a class="btn btn-brand me-sm-2" style="font-size: large;" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{ route('logout') }}">Logout--}}
-{{--                            <form id="logout-form" action="{{ route('logout') }}" method="POST">--}}
-{{--                                @csrf--}}
-{{--                                --}}{{--                                <button class="btn btn-brand" style="font-size: large;" type="submit">Logout</button>--}}
-{{--                            </form>--}}
-{{--                        </a>--}}
                         <a class="btn">
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf

@@ -6,17 +6,12 @@
 
     <title>{{$title}}</title>
 </head>
-
 <body data-bs-spy="scroll" data-bs-target=".navbar">
-
 @include('components.layouts.navbar')
 
 {{$slot}}
 
-{{--@include('components.layouts.other')--}}
-
 @include('components.layouts.footer')
-
 @include('components.layouts.script')
 </body>
 </html>
