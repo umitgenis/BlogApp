@@ -8,7 +8,7 @@
                         <a class="btn">
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button class="btn btn-brand" style="font-size: large;" type="submit">Logout</button>
+                                <button class="btn btn-control" style="font-size: large;" type="submit">Logout</button>
                             </form>
                         </a>
                         <a href="{{url('profile',['id'=>Auth::user()->id])}}" class="btn btn-control me-2 ">

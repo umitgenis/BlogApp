@@ -27,10 +27,10 @@
                                                 <div class="col-sm-12 d-inline-flex justify-content-sm-end">
                                                     <div class="p-sm-3 me-sm-1 mt-sm-1">
                                                         <a class="btn btn-control"
-                                                           href="{{route('update',['id'=>$detail->id])}}">Düzenle</a>
+                                                           href="{{route('update',['id'=>$detail->id])}}">Edit</a>
 
                                                         <a class="btn btn-control"
-                                                           href="{{route('delete',$detail->id)}}">Sil</a>
+                                                           href="{{route('delete',$detail->id)}}">Delete</a>
                                                     </div>
                                                 </div>
                                             @endif

@@ -135,14 +135,16 @@ section {
     border-end-end-radius: 10px !important;
 }
 .btn-control:hover {
-    background-color:rgba(255, 77, 41, 0.0) ;
-    color: rgba(244, 49, 10, 0.9);
     box-shadow:10px 5px 10px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    color: #ff4d29;
+    border-color: #ff4d29;
 }
 .btn-brand:hover {
     background-color:rgba(255, 77, 41, 0.09) ;
     color: rgba(244, 49, 10, 0.9);
     box-shadow:10px 5px 10px rgba(0, 0, 0, 0.08);
+    border-color: rgba(244, 49, 10, 0.9);
 }
 .btn-detail:hover {
     background-color:rgba(255, 77, 41, 0.0) ;
